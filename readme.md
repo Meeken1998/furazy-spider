@@ -2,6 +2,7 @@
 ------------
 
 作者：Meeken
+[npm](https://www.npmjs.com/package/furazy)
 [Github](https://github.com/Meeken1998)
 [Blog](https://meek3n.cn)
 
@@ -33,7 +34,6 @@ const searchIt = async () => {
 
 searchIt()
 ```
-
 **搜索结果（示例）**
 ```js
 [
@@ -49,7 +49,18 @@ searchIt()
 可以很方便地将~~本子~~图片渲染在页面上～
 
 
-**作者有话说**
->Furazy 遵循 MIT 协议，您可以在您的项目中随意使用她的源码，同时记得包含版权声明和许可声明。
->开发 Furazy 为学习交流之用。若发现 Furazy 侵犯了您的权利，请您联系 meeken#authing.cn。
+---
 
+**二次开发**
+```bash
+$ git clone https://github.com/Meeken1998/furazy-spider/ furazy && cd furazy
+$ npm install
+```
+测试
+```bash
+$ npm test
+```
+
+
+**协议**
+MIT
