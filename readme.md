@@ -61,7 +61,7 @@ searchIt()
 **搜索结果（示例）**
 
 ```js
-;[
+[
   {
     title:
       "2019 ambiguous_gender bodily_fluids digital_drawing_(artwork) digital_media_(artwork) dragon dragonite drooling duo eevee feral hiore hi_res imminent_vore larger_pred licking licking_lips macro mammal nintendo oral_vore pokémon pokémon_(species) saliva simple_background size_difference slightly_chubby soft_vore tongue tongue_out video_games vore white_background",
@@ -94,4 +94,5 @@ $ npm test
 ```
 
 **协议**
+
 MIT

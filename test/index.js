@@ -4,9 +4,7 @@ const furry = new Furazy()
 const testThis = async () => {
   // let res = await furry.search("eevee", 2, 1, 24)
   // console.log(res)
-  let res = await furry.getCommic(
-    "https://myreadingmanga.info/nagi-wataru-burlesque-night-kr/"
-  )
+  let res = await furry.searchCommic("eevee")
   console.log(res)
 }
 
