@@ -23,7 +23,7 @@ const Furry = new Furazy()
 
 //Furazy 的所有请求均为异步操作，可用 .then() 或 await 获取结果
 const searchIt = async () => {
-	let result = Furry.search(
+	let result = await Furry.search(
 		'eevee', //关键词
 		0, //类型，0为 e621 类型，1为 fa
 		1, //页码
