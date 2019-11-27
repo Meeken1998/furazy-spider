@@ -1,6 +1,6 @@
 {
   "name": "furazy",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "A module for searching FURRY pictures",
   "main": "index.js",
   "directories": {
@@ -11,9 +11,12 @@
   },
   "keywords": [
     "furry",
-    "qwq",
+    "api",
     "e621",
-    "furaffinity"
+    "e926",
+    "myreadingmanga",
+    "furaffinity",
+    "chinese"
   ],
   "author": "Meeken",
   "license": "MIT",

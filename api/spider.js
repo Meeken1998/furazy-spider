@@ -41,6 +41,36 @@ const searchOnE621 = async options => {
   return info
 }
 
+const searchOnE926 = async options => {
+  let res = await axios.get("https://e926.net/post", {
+    params: {
+      tags: options.name,
+      page: options.page,
+      limit: options.limit
+    }
+  })
+  const data = res.data
+
+  let info = []
+  for (let i = 0; i < data.length; i++) {
+    if (data[i]["file_url"]) {
+      let obj = {}
+      obj["title"] = data[i]["tags"] || ""
+      obj["preview"] = data[i]["preview_url"] || ""
+      obj["image"] = data[i]["file_url"] || ""
+      obj["author"] =
+        data[i]["artist"] instanceof Array ? data[i]["artist"].join(", ") : ""
+      obj["author_url"] =
+        data[i]["sources"] instanceof Array ? data[i]["sources"].join(", ") : ""
+      info.push(formatItem(obj))
+    }
+  }
+
+  console.log(info)
+
+  return info
+}
+
 const searchOnFuraffinity = async options => {
   let res = await axios.get("https://www.furaffinity.net/search/", {
     params: {
@@ -105,5 +135,6 @@ const searchOnFuraffinity = async options => {
 
 module.exports = {
   searchOnE621,
-  searchOnFuraffinity
+  searchOnFuraffinity,
+  searchOnE926
 }
