@@ -2,6 +2,7 @@
 ------------
 
 作者：Meeken
+[npm](https://www.npmjs.com/package/furazy)
 [Github](https://github.com/Meeken1998)
 [Blog](https://meek3n.cn)
 
@@ -20,18 +21,6 @@ import Furazy from 'furazy'
 ```js
 const Furry = new Furazy()
 
----
-
-**二次开发**
-```bash
-$ git clone https://github.com/Meeken1998/furazy-spider/ furazy && cd furazy
-$ npm install
-```
-测试
-```bash
-$ npm test
-```
-
 //Furazy 的所有请求均为异步操作，可用 .then() 或 await 获取结果
 const searchIt = async () => {
 	let result = Furry.search(
@@ -45,7 +34,6 @@ const searchIt = async () => {
 
 searchIt()
 ```
-
 **搜索结果（示例）**
 ```js
 [
@@ -59,6 +47,19 @@ searchIt()
 ]
 ```
 可以很方便地将~~本子~~图片渲染在页面上～
+
+
+---
+
+**二次开发**
+```bash
+$ git clone https://github.com/Meeken1998/furazy-spider/ furazy && cd furazy
+$ npm install
+```
+测试
+```bash
+$ npm test
+```
 
 
 **协议**
