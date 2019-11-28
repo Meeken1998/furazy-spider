@@ -1,8 +1,7 @@
 ## 🐱 Furazy - 轻巧的小动物图片收集库
 
 作者 / Author：Meeken
-
-版本 / Version：v0.0.9
+版本 / Version：v0.1.0
 
 ---
 
@@ -12,11 +11,13 @@
 
 ###安装 / Install
 
+
 ```bash
 $ npm install furazy --save
 ```
 
 ###引入 / Import this
+
 
 ```js
 // es5
@@ -26,6 +27,7 @@ import Furazy from "furazy"
 ```
 
 ###使用 / Best Practice
+
 
 ```js
 const Furry = new Furazy()
@@ -62,6 +64,7 @@ searchIt()
 
 ###搜索结果（示例） / Search Result
 
+
 ```js
 [
   {
@@ -80,9 +83,12 @@ searchIt()
 
 可以很方便地将~~本子~~图片渲染在页面上～
 
+
 ---
 
+
 ###二次开发 / Development
+
 
 ```bash
 $ git clone https://github.com/Meeken1998/furazy-spider/ furazy && cd furazy
@@ -91,10 +97,12 @@ $ npm install
 
 ###测试 / Test
 
+
 ```bash
 $ npm test
 ```
 
 ###协议 / Agreement
+
 
 MIT
