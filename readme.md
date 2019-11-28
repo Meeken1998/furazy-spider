@@ -1,9 +1,8 @@
-### Furazy - 轻巧的小动物图片收集库
-
----
+## 🐱 Furazy - 轻巧的小动物图片收集库
 
 作者 / Author：Meeken
-版本 / Version：v0.0.8
+
+版本 / Version：v0.0.9
 
 ---
 
@@ -11,13 +10,13 @@
 [Github](https://github.com/Meeken1998)
 [Blog](https://meek3n.cn)
 
-**安装 / Install**
+###安装 / Install
 
 ```bash
 $ npm install furazy --save
 ```
 
-**引入 / Import this**
+###引入 / Import this
 
 ```js
 // es5
@@ -26,7 +25,7 @@ const Furazy = require("furazy")
 import Furazy from "furazy"
 ```
 
-**使用 / Best Practice**
+###使用 / Best Practice
 
 ```js
 const Furry = new Furazy()
@@ -61,10 +60,10 @@ const searchIt = async () => {
 searchIt()
 ```
 
-**搜索结果（示例） / Search Result**
+###搜索结果（示例） / Search Result
 
 ```js
-;[
+[
   {
     title:
       "2019 ambiguous_gender bodily_fluids digital_drawing_(artwork) digital_media_(artwork) dragon dragonite drooling duo eevee feral hiore hi_res imminent_vore larger_pred licking licking_lips macro mammal nintendo oral_vore pokémon pokémon_(species) saliva simple_background size_difference slightly_chubby soft_vore tongue tongue_out video_games vore white_background",
@@ -83,19 +82,19 @@ searchIt()
 
 ---
 
-**二次开发 / Development**
+###二次开发 / Development
 
 ```bash
 $ git clone https://github.com/Meeken1998/furazy-spider/ furazy && cd furazy
 $ npm install
 ```
 
-**测试 / Test**
+###测试 / Test
 
 ```bash
 $ npm test
 ```
 
-**协议 / Agreement**
+###协议 / Agreement
 
 MIT
