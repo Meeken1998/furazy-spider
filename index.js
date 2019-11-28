@@ -4,7 +4,7 @@ const {
   searchOnE926
 } = require("./api/spider")
 
-const { findInMyReadingManga, getCommic } = require("./api/commic")
+const { findInMyReadingManga, getComic } = require("./api/comic")
 
 class Furazy {
   constructor() {}
@@ -51,14 +51,14 @@ class Furazy {
   }
 
   /**
-   * @description 从 MyReadingManga搜索漫画，不支持设置每页显示数量。
+   * @description 从 MyReadingManga 搜索漫画，不支持设置每页显示数量。
    * @param {String} name 搜索关键词，多个请用空格区分。如 shota。
    * @param {Int} sort 0: 热度，1: 随机，2: 从旧到新，3: 从新到旧。
    * @param {Int} page 页码，默认为 1。
    * @param {String} keywords 自定义搜索参数，勿添加 "&"，如 wpsolr_fq[0]=genre_str:Furry。
    * @return {Array} 包含同人志信息的数组，[ { title, source, image, tags } ]。
    */
-  async searchCommic(name = "", sort = 0, page = 1, keywords = "") {
+  async searchComic(name = "", sort = 0, page = 1, keywords = "") {
     const sortOptions = [
       "sort_by_random",
       "sort_by_relevancy_desc",
@@ -79,11 +79,11 @@ class Furazy {
 
   /**
    * @description 获取 MyReadingManga 的某一本漫画。
-   * @param {String} commicUrl 漫画地址。
+   * @param {String} comicUrl 漫画地址。
    * @return {Array} 同人志漫画图片地址的数组，[ { url1, url2, ... } ]。
    */
-  async getCommic(commicUrl = "") {
-    let res = await getCommic(commicUrl)
+  async getComic(comicUrl = "") {
+    let res = await getComic(comicUrl)
     return res
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "furazy",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A module for searching FURRY pictures",
   "main": "index.js",
   "directories": {

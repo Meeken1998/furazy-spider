@@ -52,9 +52,9 @@ const findInMyReadingManga = async options => {
   }
 }
 
-const getCommic = async commicUrl => {
+const getComic = async comicUrl => {
   try {
-    let url = commicUrl
+    let url = comicUrl
 
     url = url.replace(/\/\d/, "")
 
@@ -78,7 +78,6 @@ const getCommic = async commicUrl => {
     }
 
     if ($(".entry-pagination")) {
-      console.log("有下一页")
       let pageArr = [],
         imgArr = []
 
@@ -126,4 +125,4 @@ const getCommitPrivate = async url => {
   }
 }
 
-module.exports = { findInMyReadingManga, getCommic }
+module.exports = { findInMyReadingManga, getComic }

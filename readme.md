@@ -3,7 +3,7 @@
 ---
 
 作者：Meeken
-版本：v0.0.6
+版本：v0.0.7
 
 ---
 
@@ -43,16 +43,16 @@ const searchIt = async () => {
   console.log(searchResult)
 
   //搜索同人志
-  let mrm = await Furry.searchCommic(
+  let mrm = await Furry.searchComic(
     "pokemon" //关键词
   )
   console.log(mrm)
 
   //查看同人志
-  let commic = await Furry.getCommic(
-    "your_commic_url" //漫画地址
+  let comic = await Furry.getComic(
+    "your_comic_url" //漫画地址
   )
-  console.log(commic)
+  console.log(comic)
 }
 
 searchIt()
