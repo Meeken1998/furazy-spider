@@ -8,8 +8,8 @@ const Furry = new Furazy()
 const searchIt = async () => {
   // Search furry pictures
   let searchResult = await Furry.searchImage(
-    "eevee", //[String]name (search keywords)
-    0,       //[Int]type, 0: e621.net，1: fa, 2: e926.net
+    "eevee",   //[String]name (search keywords)
+    3,       //[Int]type, 0: e621.net，1: fa, 2: e926.net
     1,       //[Int]page
     1        //[Int]limit
   )
@@ -18,14 +18,14 @@ const searchIt = async () => {
   // Search doujins
   let mrm = await Furry.searchComic(
     "pokemon", //[String]name (search keywords)
-    0,         //[Int]sort
-    1,         //[Int]page
+    0, //[Int]sort
+    1 //[Int]page
   )
   console.log(mrm)
 
   // View doujins (only for myreadingmanga.info now)
   let comic = await Furry.getComic(
-    "your_comic_url" //[String]commicUrl
+    "https://myreadingmanga.info/koto-sato-yamashii-koino-hajimekata-kr/" //[String]commicUrl
   )
   console.log(comic)
 }

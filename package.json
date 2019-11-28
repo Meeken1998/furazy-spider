@@ -1,6 +1,6 @@
 {
   "name": "furazy",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A module for searching FURRY pictures",
   "main": "index.js",
   "directories": {
@@ -16,6 +16,7 @@
     "e926",
     "myreadingmanga",
     "furaffinity",
+    "booru",
     "chinese"
   ],
   "author": "Meeken",

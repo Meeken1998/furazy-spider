@@ -1,6 +1,19 @@
 const axios = require("axios")
 const cheerio = require("cheerio")
 
+const urlEncode = obj => {
+  let o = obj
+  let str = ""
+  for (let key in o) {
+    if (!str) {
+      str = str + key + "=" + encodeURI(o[key])
+    } else {
+      str = str + "&" + key + "=" + encodeURI(o[key])
+    }
+  }
+  return str
+}
+
 const formatItem = obj => {
   return {
     title: obj["title"] || "",
@@ -36,8 +49,6 @@ const searchOnE621 = async options => {
     }
   }
 
-  console.log(info)
-
   return info
 }
 
@@ -66,7 +77,52 @@ const searchOnE926 = async options => {
     }
   }
 
-  console.log(info)
+  return info
+}
+
+const searchOnBooru = async options => {
+  let url = "https://furry.booru.org/index.php"
+  url =
+    url +
+    "?" +
+    urlEncode({
+      page: "post",
+      s: "list",
+      tags: options.name,
+      pid: options.page >= 1 ? (options.page - 1) * 20 : 0
+    })
+
+  let res = await axios.get(url)
+  const data = res.data
+  const $ = cheerio.load(data)
+
+  let info = []
+  $("div#post-list span.thumb").each((index, element) => {
+    let preview =
+      $(element)
+        .find("img")
+        .attr("src") || ""
+    let image = preview.replace("/thumbnails/", "/samples/")
+    let title =
+      $(element)
+        .find("img")
+        .attr("alt") || ""
+    let author = ""
+    let author_url =
+      "https://furry.booru.org/" +
+        $(element)
+          .find("a")
+          .attr("href") || ""
+    info.push(
+      formatItem({
+        image,
+        title,
+        author,
+        author_url,
+        preview
+      })
+    )
+  })
 
   return info
 }
@@ -136,5 +192,6 @@ const searchOnFuraffinity = async options => {
 module.exports = {
   searchOnE621,
   searchOnFuraffinity,
-  searchOnE926
+  searchOnE926,
+  searchOnBooru
 }

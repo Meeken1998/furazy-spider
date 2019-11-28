@@ -1,7 +1,8 @@
 const {
   searchOnFuraffinity,
   searchOnE621,
-  searchOnE926
+  searchOnE926,
+  searchOnBooru
 } = require("./api/spider")
 
 const { findInMyReadingManga, getComic } = require("./api/comic")
@@ -11,9 +12,9 @@ class Furazy {
   /**
    * @description 异步的图片搜索。
    * @param {String} name 搜索关键词，多个请用空格区分。如 eevee。
-   * @param {Int} type 目标网站类型，0: e621，1: FA，2: e926。默认为 0。
+   * @param {Int} type 目标网站类型，0: e621，1: FA，2: e926，3: furry.booru.org。默认为 0。
    * @param {Int} page 页码，默认为 1。
-   * @param {Int} limit 每页限制数量，默认为 24。（注意：FA 的 limit 只可为 24，48 或 72)
+   * @param {Int} limit 每页限制数量，默认为 24。（注意：FA 的 limit 只可为 24，48 或 72，furry.booru.org 不能限制 limit。)
    * @return {Array} 包含图片地址，缩略图地址，作者，作者主页的数组，[ {title, preview, image, author, author_url } ]。
    */
   async searchImage(name = "", type = 0, page = 1, limit = 10) {
@@ -39,6 +40,11 @@ class Furazy {
 
       case 2: {
         res = await searchOnE926(options)
+        break
+      }
+
+      case 3: {
+        res = await searchOnBooru(options)
         break
       }
 
