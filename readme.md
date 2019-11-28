@@ -1,8 +1,7 @@
 # 🐱 Furazy - 轻巧的小动物图片收集库
 
 A module for searching FURRY pictures.
-[Find it on NPM](https://www.npmjs.com/package/furazy)
-[Add issues on Github](https://github.com/Meeken1998/furazy-spider/issues)
+[Find it on NPM](https://www.npmjs.com/package/furazy)  /  [Add issues on Github](https://github.com/Meeken1998/furazy-spider/issues)
 
 # Usage
 
@@ -70,7 +69,7 @@ searchIt()
 ##### Result sample
 
 ```js
-;[
+[
   {
     title:
       "2019 ambiguous_gender bodily_fluids digital_drawing_(artwork) digital_media_(artwork) dragon dragonite drooling duo eevee feral hiore hi_res imminent_vore larger_pred licking licking_lips macro mammal nintendo oral_vore pokémon pokémon_(species) saliva simple_background size_difference slightly_chubby soft_vore tongue tongue_out video_games vore white_background",
