@@ -54,6 +54,7 @@ const searchIt = async () => {
     "pokemon", //[String]name (search keywords)
     0,         //[Int]sort
     1,         //[Int]page
+  )
   console.log(mrm)
 
   // View doujins (only for myreadingmanga.info now)

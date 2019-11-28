@@ -1,11 +1,33 @@
 const Furazy = require("../index")
 // const { getComic } = require("../api/comic")
-const furry = new Furazy()
-const testThis = async () => {
-  // let res = await furry.search("eevee", 2, 1, 24)
-  // console.log(res)
-  let res = await furry.searchComic("eevee")
-  console.log(res)
+const Furry = new Furazy()
+/*
+  Furazy 的所有请求均为异步操作，可用 .then() 或 await 获取结果
+  All requests in Furazy are asynchronous, u can use .then() or await to get results.
+*/
+const searchIt = async () => {
+  // Search furry pictures
+  let searchResult = await Furry.searchImage(
+    "eevee", //[String]name (search keywords)
+    0,       //[Int]type, 0: e621.net，1: fa, 2: e926.net
+    1,       //[Int]page
+    1        //[Int]limit
+  )
+  console.log(searchResult)
+
+  // Search doujins
+  let mrm = await Furry.searchComic(
+    "pokemon", //[String]name (search keywords)
+    0,         //[Int]sort
+    1,         //[Int]page
+  )
+  console.log(mrm)
+
+  // View doujins (only for myreadingmanga.info now)
+  let comic = await Furry.getComic(
+    "your_comic_url" //[String]commicUrl
+  )
+  console.log(comic)
 }
 
-testThis()
+searchIt()
