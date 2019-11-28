@@ -2,8 +2,8 @@
 
 ---
 
-作者：Meeken
-版本：v0.0.7
+作者 / Author：Meeken
+版本 / Version：v0.0.8
 
 ---
 
@@ -11,13 +11,13 @@
 [Github](https://github.com/Meeken1998)
 [Blog](https://meek3n.cn)
 
-**安装**
+**安装 / Install**
 
 ```bash
 $ npm install furazy --save
 ```
 
-**引入**
+**引入 / Import this**
 
 ```js
 // es5
@@ -26,14 +26,17 @@ const Furazy = require("furazy")
 import Furazy from "furazy"
 ```
 
-**使用**
+**使用 / Best Practice**
 
 ```js
 const Furry = new Furazy()
 
-//Furazy 的所有请求均为异步操作，可用 .then() 或 await 获取结果
+/*
+  Furazy 的所有请求均为异步操作，可用 .then() 或 await 获取结果
+  All requests in Furazy are asynchronous, u can use .then() or await to get results.
+*/
 const searchIt = async () => {
-  // 搜索同人图
+  // 搜索同人图 / Search furry pictures
   let searchResult = await Furry.searchImage(
     "eevee", //关键词
     0, //类型，0为 e621 类型，1为 fa
@@ -42,13 +45,13 @@ const searchIt = async () => {
   )
   console.log(searchResult)
 
-  //搜索同人志
+  //搜索同人志 / Search doujins
   let mrm = await Furry.searchComic(
     "pokemon" //关键词
   )
   console.log(mrm)
 
-  //查看同人志
+  //查看同人志 / View doujins
   let comic = await Furry.getComic(
     "your_comic_url" //漫画地址
   )
@@ -58,10 +61,10 @@ const searchIt = async () => {
 searchIt()
 ```
 
-**搜索结果（示例）**
+**搜索结果（示例） / Search Result**
 
 ```js
-[
+;[
   {
     title:
       "2019 ambiguous_gender bodily_fluids digital_drawing_(artwork) digital_media_(artwork) dragon dragonite drooling duo eevee feral hiore hi_res imminent_vore larger_pred licking licking_lips macro mammal nintendo oral_vore pokémon pokémon_(species) saliva simple_background size_difference slightly_chubby soft_vore tongue tongue_out video_games vore white_background",
@@ -80,19 +83,19 @@ searchIt()
 
 ---
 
-**二次开发**
+**二次开发 / Development**
 
 ```bash
 $ git clone https://github.com/Meeken1998/furazy-spider/ furazy && cd furazy
 $ npm install
 ```
 
-测试
+**测试 / Test**
 
 ```bash
 $ npm test
 ```
 
-**协议**
+**协议 / Agreement**
 
 MIT
