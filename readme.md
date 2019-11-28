@@ -9,18 +9,15 @@ A module for searching FURRY pictures.
 
 ##### Install
 
-Install
-
 ```bash
 $ npm install furazy --save
 ```
 
-Update
+##### Update
 
 ```bash
 $ npm update furazy
 ```
-
 
 ##### Import
 
@@ -51,18 +48,18 @@ const Furry = new Furazy()
 const searchIt = async () => {
   // Search furry pictures
   let searchResult = await Furry.searchImage(
-    "eevee", //[String]name (search keywords)
-    0, //[Int]type, 0: e621.net，1: fa, 2: e926.net
-    1, //[Int]page
-    1 //[Int]limit
+    "eevee",    //[String]name (search keywords)
+    0,          //[Int]type, 0: e621.net，1: fa, 2: e926.net
+    1,          //[Int]page
+    1           //[Int]limit
   )
   console.log(searchResult)
 
   // Search doujins
   let mrm = await Furry.searchComic(
-    "pokemon", //[String]name (search keywords)
-    0, //[Int]sort
-    1 //[Int]page
+    "pokemon",  //[String]name (search keywords)
+    0,          //[Int]sort
+    1           //[Int]page
   )
   console.log(mrm)
 
