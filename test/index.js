@@ -9,9 +9,9 @@ const searchIt = async () => {
   // Search furry pictures
   let searchResult = await Furry.searchImage(
     "eevee",   //[String]name (search keywords)
-    3,       //[Int]type, 0: e621.net，1: fa, 2: e926.net
-    1,       //[Int]page
-    1        //[Int]limit
+    1,         //[Int]type, 0: e621.net，1: fa, 2: e926.net
+    1,         //[Int]page
+    1          //[Int]limit
   )
   console.log(searchResult)
 
@@ -30,4 +30,17 @@ const searchIt = async () => {
   console.log(comic)
 }
 
+const canIUse = async () => {
+  let checkResult = await Furry.canIUse([
+    "e621",
+    "e926",
+    "myreadingmanga",
+    "furaffinity",
+    "booru"
+  ])
+  console.log(checkResult)
+}
+
+
+canIUse()
 searchIt()

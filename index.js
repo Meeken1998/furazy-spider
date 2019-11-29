@@ -6,6 +6,7 @@ const {
 } = require("./api/spider")
 
 const { findInMyReadingManga, getComic } = require("./api/comic")
+const { canIUse } = require("./api/status")
 
 class Furazy {
   constructor() {}
@@ -90,6 +91,16 @@ class Furazy {
    */
   async getComic(comicUrl = "") {
     let res = await getComic(comicUrl)
+    return res
+  }
+
+  /**
+   * @description 网络连接检查，判断目标网站状态码是否为 200。
+   * @param {Array} sites 欲检查的网站简称，可包含: e621, e926, furaffinity, myreadingmanga, booru,
+   * @return {Object} 检测结果对象，如 { e621: 200 }。
+   */
+  async canIUse(sites = []) {
+    let res = await canIUse(sites)
     return res
   }
 }
