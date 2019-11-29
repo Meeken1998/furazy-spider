@@ -8,7 +8,7 @@ const canIUse = async options => {
   let res = {},
     tmp
   if (arr.indexOf("e621") > -1) {
-    console.log("正在检测 e926.net...")
+    console.log("正在检测 e621.net...")
 
     try {
       tmp = await axios.get("https://e621.net")

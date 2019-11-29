@@ -32,7 +32,7 @@ import Furazy from "furazy"
 
 |     | Method               | Explain                  | Async | Supported sites                                      | Version |
 | --- | -------------------- | ------------------------ | ----- | ---------------------------------------------------- | ------- |
-| 1   | Furazy.canIUse()     | Network checking.        | Y     | e621.net, e926.net, furaffinity.com, furry.booru.org | v0.1.9  |
+| 1   | Furazy.canIUse()     | Network checking.        | Y     | e621.net, e926.net, furaffinity.com, furry.booru.org, myreadingmanga.info | v0.1.9  |
 | 2   | Furazy.searchImage() | Search FURRY images.     | Y     | e621.net, e926.net, furaffinity.com, furry.booru.org | v0.1.6  |
 | 3   | Furazy.searchComic() | Search FURRY dojins.     | Y     | myreadingmanga.info                                  | v0.1.0  |
 | 4   | Furazy.getComic()    | Get a dojin through url. | Y     | myreadingmanga.info                                  | v0.1.0  |
@@ -49,18 +49,18 @@ const Furry = new Furazy()
 const searchIt = async () => {
   // Search furry pictures
   let searchResult = await Furry.searchImage(
-    "eevee", //[String]name (search keywords)
-    0, //[Int]type, 0: e621.net，1: fa, 2: e926.net
-    1, //[Int]page
-    1 //[Int]limit
+    "eevee",      //[String]name (search keywords)
+    0,            //[Int]type, 0: e621.net，1: fa, 2: e926.net
+    1,            //[Int]page
+    1             //[Int]limit
   )
   console.log(searchResult)
 
   // Search doujins
   let mrm = await Furry.searchComic(
-    "pokemon", //[String]name (search keywords)
-    0, //[Int]sort
-    1 //[Int]page
+    "pokemon",    //[String]name (search keywords)
+    0,            //[Int]sort
+    1             //[Int]page
   )
   console.log(mrm)
 
