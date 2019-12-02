@@ -31,13 +31,7 @@ const searchIt = async () => {
 }
 
 const canIUse = async () => {
-  let checkResult = await Furry.canIUse([
-    "e621",
-    "e926",
-    "myreadingmanga",
-    "furaffinity",
-    "booru"
-  ])
+  let checkResult = await Furry.canIUse()
   console.log(checkResult)
 }
 

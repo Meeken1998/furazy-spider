@@ -96,11 +96,18 @@ class Furazy {
 
   /**
    * @description 网络连接检查，判断目标网站状态码是否为 200。
-   * @param {Array} sites 欲检查的网站简称，可包含: e621, e926, furaffinity, myreadingmanga, booru,
+   * @param {Array} sites 欲检查的网站简称，为空则检测全部。可包含: e621, e926, furaffinity, myreadingmanga, booru。
    * @return {Object} 检测结果对象，如 { e621: 200 }。
    */
   async canIUse(sites = []) {
-    let res = await canIUse(sites)
+    let sitesOptions = sites
+    if (
+      !sitesOptions ||
+      (sitesOptions instanceof Array && sitesOptions.length == 0)
+    ) {
+      sitesOptions = ["e621", "e926", "myreadingmanga", "furaffinity", "booru"]
+    }
+    let res = await canIUse(sitesOptions)
     return res
   }
 }
