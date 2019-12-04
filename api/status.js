@@ -14,7 +14,7 @@ const canIUse = async options => {
       tmp = await axios.get("https://e621.net")
       res.e621 = tmp.status
     } catch (err) {
-      console.log("\x1b[91m", "连接超时")
+      console.log("\x1b[91m", "[连接超时]")
       res.e621 = 500
     }
   }
@@ -25,7 +25,7 @@ const canIUse = async options => {
       tmp = await axios.get("https://e926.net")
       res.e926 = tmp.status
     } catch (err) {
-      console.log("\x1b[91m", "连接超时")
+      console.log("\x1b[91m", "[连接超时]")
       res.e926 = 500
     }
   }
@@ -36,7 +36,7 @@ const canIUse = async options => {
       tmp = await axios.get("https://furry.booru.org/index.php")
       res.booru = tmp.status
     } catch (err) {
-      console.log("\x1B[36m%s\x1B[0m", "\x1b[91m", "连接超时")
+      console.log("\x1B[36m%s\x1B[0m", "\x1b[91m", "[连接超时]")
 
       res.booru = 500
     }
@@ -47,7 +47,8 @@ const canIUse = async options => {
       tmp = await axios.get("https://myreadingmanga.info")
       res.myreadingmanga = tmp.status
     } catch (err) {
-      console.log("\x1b[91m", "连接超时")
+      console.log(err)
+      console.log("\x1b[91m", "[连接超时]")
       res.myreadingmanga = 500
     }
   }
@@ -57,7 +58,7 @@ const canIUse = async options => {
       tmp = await axios.get("https://furaffinity.net")
       res.furaffinity = tmp.status
     } catch (err) {
-      console.log("\x1b[91m", "连接超时")
+      console.log("\x1b[91m", "[连接超时]")
       res.furaffinity = 500
     }
   }

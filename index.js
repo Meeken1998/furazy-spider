@@ -112,4 +112,6 @@ class Furazy {
   }
 }
 
+
+
 module.exports = Furazy

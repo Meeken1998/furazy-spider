@@ -50,7 +50,7 @@ const searchIt = async () => {
   // Search furry pictures
   let searchResult = await Furry.searchImage(
     "eevee",      //[String]name (search keywords)
-    0,            //[Int]type, 0: e621.net，1: fa, 2: e926.net
+    0,            //[Int]type, 0: e621.net，1: fa, 2: e926.net, 3: booru
     1,            //[Int]page
     1             //[Int]limit
   )

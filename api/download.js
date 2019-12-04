@@ -19,3 +19,5 @@ async function downloadFile(url, filepath, name) {
     writer.on("error", reject)
   })
 }
+
+module.exports = { downloadFile }
