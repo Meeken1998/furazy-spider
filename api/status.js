@@ -36,8 +36,7 @@ const canIUse = async options => {
       tmp = await axios.get("https://furry.booru.org/index.php")
       res.booru = tmp.status
     } catch (err) {
-      console.log("\x1B[36m%s\x1B[0m", "\x1b[91m", "[连接超时]")
-
+      console.log("\x1b[91m", "[连接超时]")
       res.booru = 500
     }
   }
