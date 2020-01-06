@@ -47,7 +47,6 @@ const canIUse = async options => {
       tmp = await axios.get("https://myreadingmanga.info")
       res.myreadingmanga = tmp.status
     } catch (err) {
-      console.log(err)
       console.log("\x1b[91m", "[连接超时]")
       res.myreadingmanga = 500
     }
