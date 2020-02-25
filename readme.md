@@ -43,9 +43,9 @@ import Furazy from "furazy"
 const Furry = new Furazy()
 
 /*
-  Furazy 的所有请求均为异步操作，可用 .then() 或 await 获取结果
-  All requests in Furazy are asynchronous, u can use .then() or await to get results.
-*/
+ * Furazy 的所有请求均为异步操作，可用 .then() 或 await 获取结果
+ * All requests in Furazy are asynchronous, u can use .then() or await to get results.
+ */
 const searchIt = async () => {
   // Search furry pictures
   let searchResult = await Furry.searchImage(
